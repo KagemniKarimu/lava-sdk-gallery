@@ -2,10 +2,11 @@
   "name": "lava-sdk-gallery",
   "version": "1.0.0",
   "description": "A plethora of RPC examples for LavaSDK Beta compiled into a single Node application.",
-  "main": "index.js",
+  "main": "menu.js",
   "type": "module",
   "scripts": {
-    "test": "cat index.js"
+    "test": "cat menu.js",
+    "start": "node menu.js"
   },
   "repository": {
     "type": "git",
