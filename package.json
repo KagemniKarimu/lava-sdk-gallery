@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A plethora of RPC examples for LavaSDK Beta compiled into a single Node application.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "cat index.js"
   },
@@ -24,7 +25,7 @@
   "homepage": "https://github.com/KagemniKarimu/lava-sdk-gallery#readme",
   "dependencies": {
     "@lavanet/lava-sdk": "^0.27.3",
-    "chalk": "^5.3.0",
+    "colors": "^1.4.0",
     "inquirer": "^9.2.12"
   }
 }
