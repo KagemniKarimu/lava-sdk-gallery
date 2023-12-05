@@ -1,0 +1,25 @@
+{
+  "name": "lava-sdk-gallery",
+  "version": "1.0.0",
+  "description": "A plethora of RPC examples for LavaSDK Beta compiled into a single Node application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cat index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KagemniKarimu/lava-sdk-gallery.git"
+  },
+  "keywords": [
+    "Lava",
+    "Blockchain",
+    "Web3",
+    "APIs"
+  ],
+  "author": "KagemniKarimu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KagemniKarimu/lava-sdk-gallery/issues"
+  },
+  "homepage": "https://github.com/KagemniKarimu/lava-sdk-gallery#readme"
+}
