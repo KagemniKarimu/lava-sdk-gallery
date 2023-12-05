@@ -1,31 +1,33 @@
 import inquirer from 'inquirer';
 import colors from 'colors';
+import { getExamplesMenu } from './examples.js'
 
 // Menu Logic
 async function displayMainMenu() {
-  
+
   let continueRunning = true;
-  
+
   while (continueRunning) {
 
-  const answers = await inquirer.prompt([
-    {
-      type: 'list',
-      name: 'action',
-      message: 'Main Menu:',
-      choices: [
-        '🚀 Method 1',
-        '🎬 Method 2',
-        '🆘 Help',
-        '🚩 Getting Started with Lava SDK',
-        '🏳️ Quit'
-      ],
-    },
-  ])
+    const answers = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'action',
+        message: 'Main Menu:',
+        choices: [
+          '🚀 Examples',
+          '🎬 Method 2',
+          '🆘 Help',
+          '🚩 Getting Started with Lava SDK',
+          '🏳️ Quit'
+        ],
+      },
+    ])
 
-  switch (answers.action) {
-    case '🚀 Method 1':
-      console.log('Method 1 executed'.blue);
+    switch (answers.action) {
+      case '🚀 Examples':
+        console.log('Method 1 executed'.blue);
+        await getExamplesMenu()
         // method1();
         break;
       case '🎬 Method 2':
@@ -58,6 +60,6 @@ function quitApp() {
 }
 
 // Program Logic
-console.log('Welcome to','LavaSDK'.blue.bold, 'BETA'.bgRed,'Gallery')
-console.log('Check out documentation @','https://docs.lavanet.xyz/access-sdk'.underline.green)
+console.log('Welcome to', 'LavaSDK'.blue.bold, 'BETA'.bgRed, 'Gallery')
+console.log('Check out documentation @', 'https://docs.lavanet.xyz/access-sdk'.underline.green)
 displayMainMenu();
