@@ -15,32 +15,32 @@ async function displayMainMenu() {
         name: 'action',
         message: 'Main Menu:',
         choices: [
-          '🚀 Examples',
-          '🎬 Method 2',
+          '🚀 SDK Examples',
+          '🎬 ...',
           '🆘 Help',
-          '🚩 Getting Started with Lava SDK',
-          '🏳️ Quit'
+          '🌋 Getting Started with Lava SDK',
+          '❌ Quit'
         ],
       },
     ])
 
     switch (answers.action) {
-      case '🚀 Examples':
+      case '🚀 SDK Examples':
         console.log('Method 1 executed'.blue);
         await getExamplesMenu()
         // method1();
         break;
-      case '🎬 Method 2':
+      case '🎬 ...':
         console.log('Method 2 executed')
         //method2();
         break;
       case '🆘 Help':
         showHelp();
         break;
-      case '🚩 Getting Started with Lava SDK':
+      case '🌋 Getting Started with Lava SDK':
         console.log("Get Started".red.bgGreen)
         break;
-      case '🏳️ Quit':
+      case '❌ Quit':
         quitApp();
         break;
       default:
