@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/KagemniKarimu/lava-sdk-gallery#readme",
   "dependencies": {
-    "@lavanet/lava-sdk": "^0.27.3",
+    "@lavanet/lava-sdk": "^0.30.3",
     "colors": "^1.4.0",
     "inquirer": "^9.2.12"
   }
