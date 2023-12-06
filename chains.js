@@ -39,13 +39,13 @@ export const chainList = [
     { chainID: "NEART", chainName: "near testnet", enabledApiInterfaces: ["jsonrpc"] },
     { chainID: "OPTM", chainName: "optimism mainnet", enabledApiInterfaces: ["jsonrpc"] },
     { chainID: "OPTMT", chainName: "optimism goerli testnet", enabledApiInterfaces: ["jsonrpc"] },
-    { chainID: "OSMO", chainName: "osmosis mainnet", enabledApiInterfaces: ["grpc", "rest", "tendermintrpc"] },
-    { chainID: "OSMOT", chainName: "osmosis testnet", enabledApiInterfaces: ["grpc", "rest", "tendermintrpc"] },
+  // { chainID: "OSMO", chainName: "osmosis mainnet", enabledApiInterfaces: ["grpc", "rest", "tendermintrpc"] },
+  // { chainID: "OSMOT", chainName: "osmosis testnet", enabledApiInterfaces: ["grpc", "rest", "tendermintrpc"] },
     { chainID: "POLYGON1", chainName: "polygon mainnet", enabledApiInterfaces: ["jsonrpc"] },
     { chainID: "POLYGON1T", chainName: "polygon testnet", enabledApiInterfaces: ["jsonrpc"] },
     { chainID: "SOLANA", chainName: "solana main net", enabledApiInterfaces: ["jsonrpc"] },
     { chainID: "SOLANAT", chainName: "solana test net", enabledApiInterfaces: ["jsonrpc"] },
     { chainID: "STRK", chainName: "starknet mainnet", enabledApiInterfaces: ["jsonrpc"] },
     { chainID: "STRKT", chainName: "starknet testnet", enabledApiInterfaces: ["jsonrpc"] },
-    { chainID: "SUIT", chainName: "sui devnet", enabledApiInterfaces: ["jsonrpc"] }
+  //  { chainID: "SUIT", chainName: "sui devnet", enabledApiInterfaces: ["jsonrpc"] }
   ];
