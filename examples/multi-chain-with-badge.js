@@ -1,11 +1,12 @@
 
 import { LavaSDK } from "@lavanet/lava-sdk";
+import ora from "ora";
 
 async function createLavaHandler() {
 
     const lavaHandler = await LavaSDK.create({
         badge: {
-            badgeServerAddress: "https://badges.lavanet.xyz", // Or your own Badge-Server URL 
+            badgeServerAddress: "https://badges.lavanet.xyz",
             projectId: "1f2cecd3bb19f996997560be2184b8d4"
         },
         chainIds: ["ETH1", "FVM", "NEAR", "COS5", "STRK", "AXELAR"],
@@ -89,16 +90,29 @@ async function getAxelarBlockHeight(lavaHandler) {
 
 export async function useMultiChainWithBadges() {
 
-    const lavaRelayHandler = await createLavaHandler()
+    const spinner = ora({
+        text: 'Initializing Chains...',
+        spinner: "binary"
+    }).start();
 
-    console.log("\n RESULTS ✨✨✨");
-    console.log("==================");
-    console.log("Axelar Block Number:", await getAxelarBlockHeight(lavaRelayHandler));
-    console.log("Ethereum Block Number:", await getEthereumBlockNum(lavaRelayHandler));
-    console.log("Filecoin Block Number:", await getFileCoinBlockNum(lavaRelayHandler));
-    console.log("NEAR Block Height:", await getNearBlockHeight(lavaRelayHandler));
-    console.log("CosmosHub Block Height:", await getCosmosBlockHeight(lavaRelayHandler));
-    console.log("Starknet Block Number:", await getStarknetBlockNumber(lavaRelayHandler));
-    console.log("\n \n");
+    try {
+        const lavaRelayHandler = await createLavaHandler()
+
+        spinner.text = 'Making Calls';
+        spinner.stop();
+
+        console.log("\n RESULTS ✨✨✨");
+        console.log("==================");
+        console.log("Axelar Block Number:", await getAxelarBlockHeight(lavaRelayHandler));
+        console.log("Ethereum Block Number:", await getEthereumBlockNum(lavaRelayHandler));
+        console.log("Filecoin Block Number:", await getFileCoinBlockNum(lavaRelayHandler));
+        console.log("NEAR Block Height:", await getNearBlockHeight(lavaRelayHandler));
+        console.log("CosmosHub Block Height:", await getCosmosBlockHeight(lavaRelayHandler));
+        console.log("Starknet Block Number:", await getStarknetBlockNumber(lavaRelayHandler));
+        console.log("\n");
+    } catch (error) {
+        spinner.stop();
+        console.error('An error occurred:', error);
+    };
 
 };
