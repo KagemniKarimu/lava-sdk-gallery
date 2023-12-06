@@ -27,6 +27,7 @@
   "dependencies": {
     "@lavanet/lava-sdk": "^0.30.3",
     "colors": "^1.4.0",
-    "inquirer": "^9.2.12"
+    "inquirer": "^9.2.12",
+    "ora": "^7.0.1"
   }
 }
