@@ -5,8 +5,8 @@
   "main": "menu.js",
   "type": "module",
   "scripts": {
-    "test": "cat menu.js",
-    "start": "node menu.js"
+    "test": "cat menu-main.js",
+    "start": "node menu-main.js"
   },
   "repository": {
     "type": "git",
