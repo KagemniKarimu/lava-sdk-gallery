@@ -4,23 +4,23 @@ Lava SDK Gallery is a plethora of RPC fetching examples for LavaSDK Beta compile
 
 ## Features 🌟
 
-### Make your own Relay 🛠️
+### 🛠️ Make your own Relay 
 
 The Gallery will help build relay requests from scratch with an interactive interface. Using LavaSDK's `sendRelay` function, a user can compose a unique call from any chain supported on Lava.
 
-### Prebuilt Examples 🚀
+### 🚀 Prebuilt Examples 
 
 The Gallery will execute example relays and provide results in real-time. Several examples across multiple chains exist.
 
-### Interactive Learning 🎓
+### 🎓 Interactive Learning
 
 Explore LavaSDK's capabilities interactively within a user-friendly command-line interface. Learn by doing, experiment with different RPC calls, and enhance your understanding of blockchain interaction.
 
-### Real-time Results 🕒
+### 🕒 Real-time Results 
 
 Execute example relays and see results instantly. Gain insights into how LavaSDK works in practice and understand the data returned by various RPC calls.
 
-### Cross-Chain Support 🌐
+### 🌐 Cross-Chain Support 
 
 Lava SDK Gallery supports multiple chains, enabling you to experiment with different blockchains and explore their unique features through real-time interactions.
 
