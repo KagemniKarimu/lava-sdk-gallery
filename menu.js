@@ -1,6 +1,7 @@
 import inquirer from 'inquirer';
 import colors from 'colors';
 import { getExamplesMenu } from './examples.js'
+import { getLearnMenu } from './learn.js';
 
 // Menu Logic
 async function displayMainMenu() {
@@ -15,42 +16,58 @@ async function displayMainMenu() {
         name: 'action',
         message: 'Main Menu:',
         choices: [
-          '🚀 SDK Examples',
-          '🎬 ...',
+          '🚀 Examples',
+          '📚 Learn',
+          '🌋 Getting Started',
           '🆘 Help',
-          '🌋 Getting Started with Lava SDK',
           '❌ Quit'
         ],
       },
     ])
 
     switch (answers.action) {
-      case '🚀 SDK Examples':
-        console.log('Method 1 executed'.blue);
+      case '🚀 Examples':
+        console.log('Lava SDK Gallery contains a plethora of examples of SDK usages that can be executed from within the application'.blue);
         await getExamplesMenu()
         // method1();
         break;
-      case '🎬 ...':
-        console.log('Method 2 executed')
-        //method2();
+      case '📚 Learn':
+        console.log('Learn more about specific topics of Lava SDK '.blue)
+        await getLearnMenu()
         break;
       case '🆘 Help':
         showHelp();
+        await returnToMainMenuPrompt()
         break;
-      case '🌋 Getting Started with Lava SDK':
+      case '🌋 Getting Started':
         console.log("Get Started".red.bgGreen)
         break;
       case '❌ Quit':
         quitApp();
         break;
       default:
-        displayMainMenu();
+        console.log('Invalid option. Please select a valid option.'.red);
     }
   }
-}
+};
+
+async function returnToMainMenuPrompt() {
+  const answer = await inquirer.prompt([
+    {
+      type: 'password',
+      name: 'returnToMainMenu',
+      message: 'Press enter to return to the Main Menu',
+    },
+  ]);
+
+  if (answer.returnToMainMenu) {
+    console.log('Returning to the Main Menu...');
+    await displayMainMenu(); 
+  }
+};
 
 // Helper Functions
-function showHelp() {
+async function showHelp() {
   console.log('Help information...');
 }
 
@@ -58,6 +75,7 @@ function quitApp() {
   console.log('Quitting the application. Goodbye!');
   process.exit();
 }
+
 
 // Program Logic
 console.log('Welcome to', 'LavaSDK'.blue.bold, 'BETA'.bgRed, 'Gallery')
