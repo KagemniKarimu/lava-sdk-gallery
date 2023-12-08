@@ -8,7 +8,7 @@ export async function getExamplesMenu() {
     {
       type: 'list',
       name: 'action',
-      message: 'Examples 💛:',
+      message: '🚀 Examples:',
       choices: [
         '🔨 Build an Example',
         '🧰 Use Prebuilt Examples',
