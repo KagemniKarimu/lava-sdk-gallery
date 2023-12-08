@@ -11,7 +11,7 @@ export async function getExamplesMenu() {
       name: 'action',
       message: '🚀 Examples:',
       choices: [
-        '🔨 Build an Example',
+        '🔨 Build an Example (EXPERIMENTAL)',
         '🧰 Use Prebuilt Examples',
         '🔙 Main Menu'
       ],
@@ -19,7 +19,7 @@ export async function getExamplesMenu() {
   ]);
 
   switch (answer.action) {
-    case '🔨 Build an Example':
+    case '🔨 Build an Example (EXPERIMENTAL)':
       await buildExample();
       break;
     case '🧰 Use Prebuilt Examples':
