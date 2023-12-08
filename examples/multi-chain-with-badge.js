@@ -105,7 +105,7 @@ export async function useMultiChainWithBadges() {
         console.log("==================");
         console.log("Axelar Block Number:", await getAxelarBlockHeight(lavaRelayHandler));
         console.log("Ethereum Block Number:", await getEthereumBlockNum(lavaRelayHandler));
-        console.log("Filecoin Block Number:", await getFileCoinBlockNum(lavaRelayHandler));
+      // no providers - console.log("Filecoin Block Number:", await getFileCoinBlockNum(lavaRelayHandler));
         console.log("NEAR Block Height:", await getNearBlockHeight(lavaRelayHandler));
         console.log("CosmosHub Block Height:", await getCosmosBlockHeight(lavaRelayHandler));
         console.log("Starknet Block Number:", await getStarknetBlockNumber(lavaRelayHandler));
