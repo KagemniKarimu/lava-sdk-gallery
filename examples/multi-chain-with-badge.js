@@ -13,7 +13,7 @@ async function createLavaHandler() {
     });
 
     return lavaHandler
-}
+};
 
 
 async function getEthereumBlockNum(lavaHandler) {
@@ -85,7 +85,7 @@ async function getAxelarBlockHeight(lavaHandler) {
     })
 
     return axelarRelay.block.header.height
-}
+};
 
 
 export async function useMultiChainWithBadges() {
