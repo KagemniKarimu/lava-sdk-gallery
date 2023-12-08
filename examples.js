@@ -51,7 +51,7 @@ async function getPrebuiltExamplesMenu() {
     case '🔙 Examples Menu':
       break;
     default:
-      await getPrebuiltExamplesMenu();
+      console.log('Invalid option. Please select a valid option.'.red);
   };
 };
 
