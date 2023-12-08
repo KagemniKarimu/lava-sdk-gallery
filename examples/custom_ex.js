@@ -22,13 +22,20 @@ async function selectChains() {
     {
       type: 'checkbox',
       name: 'selectedChains',
-      message: 'Select chains to make calls on:',
+      message: 'Select chains to initialize:',
       choices: chainList.map(chain => ({
         name: `⛓️ ${chain.chainName.blue} (${chain.chainID.bold})`,
         value: chain
-      }))
+      })),
+      validate: (selectedChains) => {
+        if (selectedChains.length === 0) {
+          return '\n ⚠️ Please select at least one chain to initialize.';
+        }
+        return true;
+      },
     }
   ]);
+
 
   const spinner = ora({
     text: 'Initializing Chains...',
