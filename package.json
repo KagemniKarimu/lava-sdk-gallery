@@ -26,10 +26,12 @@
   "homepage": "https://github.com/KagemniKarimu/lava-sdk-gallery#readme",
   "dependencies": {
     "@lavanet/lava-sdk": "^0.30.3",
+    "@lavanet/lava-viem": "^0.30.6",
     "@lavanet/lava-web3": "^0.30.3",
     "colors": "^1.4.0",
     "inquirer": "^9.2.12",
     "ora": "^7.0.1",
+    "viem": "^1.19.13",
     "web3": "^4.3.0"
   }
 }
