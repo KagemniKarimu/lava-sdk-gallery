@@ -3,6 +3,7 @@ import colors from 'colors';
 import { buildExample } from './examples/custom.js';
 import { useMultiChainWithBadges } from './examples/multi-chain-with-badge.js';
 import { getEthAddressBalance } from './examples/eth-address-balance-web3.js';
+import { getEthAddressTxs } from './examples/eth-track-address-tx-viem.js';
 
 export async function getExamplesMenu() {
   const answer = await inquirer.prompt([
@@ -41,6 +42,7 @@ async function getPrebuiltExamplesMenu() {
       choices: [
         '⚡🌋 Multi-chain Block Height ("ETH1", "FVM", "NEAR", "COSHUB", "STRK", "AXELAR") with Badges',
         '💰 Get the Balance on an Ethereum Address using Web3.js Integration',
+        'Track recent TXs on an Ethereum Address using viem Integration',
         '🔙 Examples Menu'
       ],
     },
@@ -52,6 +54,9 @@ async function getPrebuiltExamplesMenu() {
       break;
     case '💰 Get the Balance on an Ethereum Address using Web3.js Integration':
       await getEthAddressBalance()
+      break;
+    case 'Track recent TXs on an Ethereum Address using viem Integration':
+      await getEthAddressTxs()
       break;
     case '🔙 Examples Menu':
       break;
