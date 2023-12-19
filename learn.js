@@ -6,18 +6,19 @@ export async function getInitMethodsText() {
     console.log("🚀 Initialization methods allow you to create and initialize a LavaSDK instance:".green);
     console.log("As of version 0.27 & up, there are".green, "3 ways".bold.blue, "to initialize the SDK".green)
   
+    console.log("\n import { LavaSDK } from '@lavanet/lava-sdk'; \n"); 
     // Method: sdkInstance.create()
     console.log("\n1. ".bold.blue, "sdkInstance.create()".bold.blue);
     console.log("   - Automatically makes and initializes a LavaSDK instance.");
     console.log("   - Ideal for quick setup and use.\n");
   
-    // Method: sdkInstance.new() ... sdkInstance.init()
-    console.log("2. ".bold.blue, "sdkInstance.new() ... sdkInstance.init()".bold.blue);
+    // Method: new sdkInstance() ... sdkInstance.init()
+    console.log("2. ".bold.blue, "new sdkInstance() ... sdkInstance.init()".bold.blue);
     console.log("   - Manually makes and initializes a LavaSDK instance step by step.");
     console.log("   - Provides control over the initialization process.\n");
   
-    // Method: sdkInstance.new() ... sdkInstance.sendRelay()
-    console.log("3. ".bold.blue, "sdkInstance.new() ... sdkInstance.sendRelay()".bold.blue);
+    // Method: new sdkInstance()  ... sdkInstance.sendRelay()
+    console.log("3. ".bold.blue, "new sdkInstance() ... sdkInstance.sendRelay()".bold.blue);
     console.log("   - Makes and initializes a LavaSDK instance upon the first relay.");
     console.log("   - Delayed initialization until it's needed.\n");
   
